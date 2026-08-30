@@ -183,23 +183,27 @@ justification=justified}
 %\Fonte[#1]{#2}
 } 
 
-%Remove as bordas do hyperlinks.
+% Remove as bordas dos hyperlinks.
 \newcommand{\removerbordasdohyperlink}[1]{%
-	\ifthenelse{\equal{#1}{sim}}{%
-  		\hypersetup{%
-  		    pdfborder = {0 0 0}
-  		}
+    \ifthenelse{\equal{#1}{sim}}{%
+        \hypersetup{%
+            pdfborder = {0 0 0}
+        }
+    }{%
+        % Não altera as bordas
     }
 }
 
 % Altera a cor dos hyperlinks do documento
 \newcommand{\cordohyperlink}[1]{%
-	\ifthenelse{\equal{#1}{sim}}{%
-		\hypersetup{%
-			colorlinks = true,
-			linkcolor = blue
-		}
-	}
+    \ifthenelse{\equal{#1}{sim}}{%
+        \hypersetup{%
+            colorlinks = true,
+            linkcolor = blue
+        }
+    }{%
+        % Mantém a configuração padrão
+    }
 }
 
 % Adiciona o sexo do orientador e do coorientador no documento atraves do artigo "a".
@@ -211,15 +215,19 @@ justification=justified}
 \setboolean{ifcetex2@coorientadorfeminino}{false}
 
 \newcommand{\orientadorfeminino}[1]{
-	 \ifthenelse{\equal{#1}{sim}}{%
-	 	\setboolean{ifcetex2@orientadorfeminino}{true}
-	 }
+    \ifthenelse{\equal{#1}{sim}}{%
+        \setboolean{ifcetex2@orientadorfeminino}{true}
+    }{%
+        \setboolean{ifcetex2@orientadorfeminino}{false}
+    }
 }
 
 \newcommand{\coorientadorfeminino}[1]{
-	\ifthenelse{\equal{#1}{sim}}{%
-		\setboolean{ifcetex2@coorientadorfeminino}{true}
-	}
+    \ifthenelse{\equal{#1}{sim}}{%
+        \setboolean{ifcetex2@coorientadorfeminino}{true}
+    }{%
+        \setboolean{ifcetex2@coorientadorfeminino}{false}
+    }
 }
 
 \newcommand{\artigoorientador}{ %
@@ -260,9 +268,11 @@ justification=justified}
 \setboolean{ifcetex2@ehqualificacao}{false}
 
 \newcommand{\ehqualificacao}[1]{
-	\ifthenelse{\equal{#1}{sim}}{%
-		\setboolean{ifcetex2@ehqualificacao}{true}
-	}
+    \ifthenelse{\equal{#1}{sim}}{%
+        \setboolean{ifcetex2@ehqualificacao}{true}
+    }{%
+        \setboolean{ifcetex2@ehqualificacao}{false}
+    }
 }
 
 % Definicao das variaveis
