@@ -1,0 +1,55 @@
+\input{settings/preambulo}
+\input{settings/metadata}
+
+\begin{document}
+
+% =========================================================
+% ELEMENTOS PRÉ-TEXTUAIS
+% =========================================================
+
+\imprimircapa
+
+\imprimirfolhaderosto{}
+
+% A ficha catalográfica será inserida posteriormente,
+% após ser gerada pelo sistema do IFCE.
+%
+% \imprimirfichacatalografica{frontmatter/ficha-catalografica}
+
+\imprimirfolhadeaprovacao
+
+\imprimirresumo{frontmatter/resumo}
+
+\imprimirabstract{frontmatter/abstract}
+
+\imprimirsumario
+
+
+% =========================================================
+% ELEMENTOS TEXTUAIS
+% =========================================================
+
+\textual
+
+\input{chapters/01-introducao}
+
+\input{chapters/02-referencial-teorico}
+
+\input{chapters/03-metodologia}
+
+\input{chapters/04-resultados}
+
+\input{chapters/05-conclusao}
+
+
+% =========================================================
+% ELEMENTOS PÓS-TEXTUAIS
+% =========================================================
+
+% Ativaremos quando houver referências no arquivo .bib:
+%
+% \imprimirreferencias{backmatter/referencias}
+
+\end{document}
+
+
